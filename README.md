@@ -15,14 +15,18 @@ This project implements a simple web server (`WebServerT1`) that serves static f
 ```
 ├── src/
 │   ├── main
-│   │   ├── java/com/eci/webservert1/
-│   │   │   ├── WebServerT1.java         # Web server implementation
+│   │   ├── java/com/eci/webservert2/
 │   │   │   ├── CurrencyConverter.java   # Currency conversion logic
+│   │   │   ├── Request.java             # Class for handling HTTP requests
+│   │   │   ├── Response.java            # Class for handling HTTP responses
+│   │   │   ├── Service.java             # Class for defining registered services
+│   │   │   ├── WebServerT2.java         # Web server implementation
 │   │   ├── resources/
 │   │   │   ├── images
 │   │   │   │   ├── Initial.png             
 │   │   │   │   ├── Result.png
-│   │   │   │   ├── Test.png                           
+│   │   │   │   ├── Test.png
+│   │   │   │   ├── Uri.png                            
 │   │   │   ├── static
 │   │   │   │   ├── index.html           # Front-end interface
 │   │   │   │   ├── style.css            # Styling
@@ -51,9 +55,9 @@ This project implements a simple web server (`WebServerT1`) that serves static f
 
 ### Prerequisites
 
-1. **Java Development Kit (JDK)**
+1. **Java Development Kit 23 (JDK23)**
    * Ensure you have the following installed:
-      - Java Development Kit (JDK)
+      - Java Development Kit (JDK23)
         ```sh
         java -version
         ```
@@ -99,6 +103,14 @@ This project implements a simple web server (`WebServerT1`) that serves static f
 
 ![image](src/main/resources/images/Result.png)
 
+### Check URI
+We can use too the following requests to test the services:
+
+convert 5840 EUR to COP
+  ```sh
+   http://localhost:35000/convertir?fromCurrency=EUR&toCurrency=COP&amount=5840
+  ```
+  ![image](src/main/resources/images/Uri.png)
 ## Running the Tests
 
 To execute unit tests, use JUnit:
@@ -121,5 +133,5 @@ mvn test
 
 ## Version
 
-Version 1.0
+Version 2.0
 
