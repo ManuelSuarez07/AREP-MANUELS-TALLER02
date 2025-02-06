@@ -1,6 +1,6 @@
-# Currency Converter Web Server
+# Web Framework Development for REST Services and Static File Management
 
-This project implements a simple web server (`WebServerT1`) that serves static files and provides an API for currency conversion using the `CurrencyConverter` class. It also includes a front-end web interface with an interactive currency converter.
+This project implements a web server (WebServerT2) that serves static files and provides an API for currency conversion using the CurrencyConverter class. It also features an interactive front-end currency converter for seamless user interaction.
 
 ## Features
 
