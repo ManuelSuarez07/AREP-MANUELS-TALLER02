@@ -1,5 +1,5 @@
-import com.eci.webservert1.CurrencyConverter;
-import com.eci.webservert1.WebServerT1;
+import com.eci.webservert2.CurrencyConverter;
+import com.eci.webservert2.WebServerT2;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -75,34 +75,34 @@ public class WebServerAndCurrencyConverterTest {
         assertEquals("La conversión de 0 USD debe devolver 0 EUR", 0.0, result, 0.01);
     }
 
-    // Pruebas para WebServerT1
+    // Pruebas para WebServerT2
     @Test
     public void shouldReturnContentTypeForHtml() {
-        String extension = WebServerT1.obtainContentType("html");
+        String extension = WebServerT2.obtainContentType("html");
         assertEquals("El tipo de contenido para HTML no es correcto", "text/html", extension);
     }
 
     @Test
     public void shouldReturnContentTypeForCss() {
-        String extension = WebServerT1.obtainContentType("css");
+        String extension = WebServerT2.obtainContentType("css");
         assertEquals("El tipo de contenido para CSS no es correcto", "text/css", extension);
     }
 
     @Test
     public void shouldReturnContentTypeForJs() {
-        String extension = WebServerT1.obtainContentType("js");
+        String extension = WebServerT2.obtainContentType("js");
         assertEquals("El tipo de contenido para JS no es correcto", "text/javascript", extension);
     }
 
     @Test
     public void shouldReturnContentTypeForJpg() {
-        String extension = WebServerT1.obtainContentType("jpg");
+        String extension = WebServerT2.obtainContentType("jpg");
         assertEquals("El tipo de contenido para JPG no es correcto", "image/jpeg", extension);
     }
 
     @Test
     public void shouldReturnContentTypeForPng() {
-        String extension = WebServerT1.obtainContentType("png");
+        String extension = WebServerT2.obtainContentType("png");
         assertEquals("El tipo de contenido para PNG no es correcto", "image/png", extension);
     }
 }

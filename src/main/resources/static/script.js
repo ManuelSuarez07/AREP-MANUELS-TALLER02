@@ -42,17 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
 
         const amount = document.getElementById('amount').value;
-        const fromCurrency = document.getElementById('fromCurrency').value;
-        const toCurrency = document.getElementById('toCurrency').value;
+        const fromCurrency = document.getElementById('fromCurrency').value.toLowerCase(); // Convertir a minúsculas
+        const toCurrency = document.getElementById('toCurrency').value.toLowerCase(); // Convertir a minúsculas
 
-        const url = `/convertir?amount=${amount}&fromCurrency=${fromCurrency}&toCurrency=${toCurrency}`;
+        // Cambia la URL a la forma completa
+        const url = `http://localhost:35000/convertir?amount=${amount}&fromCurrency=${fromCurrency}&toCurrency=${toCurrency}`;
 
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then(data => {
                 document.getElementById('result').classList.remove('hidden');
+                // Mostrar el resultado en mayúsculas
                 document.getElementById('convertedAmount').textContent = 
-                    `${data.amount} ${data.from} = ${data.converted} ${data.to}`;
+                    `${data.amount} ${data.fromCurrency.toUpperCase()} = ${data.converted} ${data.toCurrency.toUpperCase()}`;
             })
             .catch(error => {
                 console.error('Error:', error);
