@@ -74,11 +74,11 @@ This project implements a web server (WebServerT2) that serves static files and 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/ManuelSuarez07/AREP-MANUELS-TALLER01.git
+   git clone https://github.com/ManuelSuarez07/AREP-MANUELS-TALLER02.git
    ```
 2. Navigate to the project directory:
    ```sh
-   cd AREP-MANUELS-TALLER01-main
+   cd AREP-MANUELS-TALLER02-main
    ```
 3. Compile the project:
    ```sh
